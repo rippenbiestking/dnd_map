@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import User, Toon
+from .models import User, Toon, Campaign
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -12,4 +12,10 @@ class UserSerializer(serializers.ModelSerializer):
 class ToonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Toon
-        fields = ('toon_name', 'toon_id', 'toon_sprite', )
+        fields = ('toon_name', 'toon_id', 'toon_sprite', 'campaigns', )
+
+
+class CampaignSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Campaign
+        fields = ('camp_name', 'encounter', )
