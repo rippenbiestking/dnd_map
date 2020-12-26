@@ -1,3 +1,4 @@
 **/*.pyc
 **/__pycache/**
-dnd_map/local_settings.pyc
+dnd_map/local_settings.py
+*.sqlite3
