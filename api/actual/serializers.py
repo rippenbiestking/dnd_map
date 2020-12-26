@@ -19,3 +19,9 @@ class CampaignSerializer(serializers.ModelSerializer):
     class Meta:
         model = Campaign
         fields = ('camp_name', 'encounter', )
+
+class GridSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Grid
+        fields = ('camp', 'name', )
+
