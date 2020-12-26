@@ -31,7 +31,7 @@ class Toon(models.Model):
     toon_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     toon_name = models.CharField(max_length=144)
     user = models.ForeignKey('User', on_delete=models.CASCADE)
-    toon_sprite = models.ImageField(upload_to=toon_sprite_dir, height_field=40, width_field=40)
+    toon_sprite = models.ImageField(upload_to=toon_sprite_dir)
 
 
 class Campaign(models.Model):
@@ -57,7 +57,7 @@ def npc_sprite_dir(instance, filename):
 
 class NPC(models.Model):
     name = models.CharField(max_length=144)
-    npc_sprite = models.ImageField(upload_to=npc_sprite_dir, height_field=40, width_field=40)
+    npc_sprite = models.ImageField(upload_to=npc_sprite_dir)
 
 
 class Encounter(models.Model):

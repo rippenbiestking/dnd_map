@@ -2,3 +2,4 @@
 **/__pycache/**
 dnd_map/local_settings.py
 *.sqlite3
+media/
